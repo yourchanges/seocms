@@ -9,7 +9,12 @@
 <script src="/static/js/jquery-2.0.3.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/static/css/global.css" />
+
+<script src="/static/js/tiny_mce/tiny_mce.js"></script>
 <script src="/static/js/global.js"></script>
+<script src="/static/js/global_admin.js"></script>
+
+
 </head>
 <body>
 <div class="container admin">

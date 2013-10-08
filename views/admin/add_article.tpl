@@ -17,16 +17,17 @@
             (必填)
         </div>
     </div><!-- End .control-group -->
-    <div class="control-group">
-        <label class="control-label" for="abstract">文章摘要</label>
-        <div class="controls">
-            <textarea id="abstract" name="abstract" placeholder="请输入文章摘要"></textarea>
-        </div>
-    </div><!-- End .control-group -->
+    
     <div class="control-group">
         <label class="control-label" for="content">文章内容</label>
         <div class="controls">
-            <textarea id="content" name="content" placeholder="请输入文章内容" rows="10"></textarea>
+            <textarea id="content" name="content" placeholder="请输入文章内容"></textarea>
+        </div>
+    </div><!-- End .control-group -->
+	<div class="control-group">
+        <label class="control-label" for="abstract">文章摘要</label>
+        <div class="controls">
+            <textarea id="abstract" name="abstract" placeholder="请输入文章摘要"></textarea>
         </div>
     </div><!-- End .control-group -->
     <div class="control-group">

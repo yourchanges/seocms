@@ -55,6 +55,23 @@ func (this *AdminSiteController) Get() {
 		}
 		this.Data["Site"] = site              // 当前通用body
 		this.TplNames = "admin/edit_body.tpl" // 页面模板文件
+	case "footerAD":
+		this.Data["PageTitle"] = fmt.Sprint("通用footerAD管理_%s_%s", ChannelName, SiteName) // 页面标题
+		site := Site{}
+		orm = InitDb()
+		err = orm.Where("name=?", "footerAD").Find(&site)
+		//Check(err)
+		if err != nil { // 如果footerAD配置信息不存在，则创建这条配置信息
+			site = Site{
+				Name:    "footerAD",
+				Content: "",
+			}
+			orm = InitDb()
+			err = orm.Save(&site)
+			Check(err)
+		}
+		this.Data["Site"] = site                  // 当前通用body
+		this.TplNames = "admin/edit_footerAD.tpl" // 页面模板文件
 	case "sitemap":
 		sitemaps := []string{}
 
@@ -115,6 +132,21 @@ func (this *AdminSiteController) Post() {
 
 		this.Data["Site"] = site
 		this.TplNames = "admin/edit_body.tpl" // 页面模板文件
+	case "footerAD":
+		this.Data["PageTitle"] = fmt.Sprintf("通用footerAD管理_%s_%s", ChannelName, SiteName) // 页面标题
+		content := this.Input().Get("content")                                            // 获取表单数据
+
+		// 保存设置
+		site := Site{}
+		orm = InitDb()
+		err = orm.Where("name=?", "footerAD").Find(&site)
+		Check(err)
+		site.Content = content
+		err = orm.Save(&site)
+		Check(err)
+
+		this.Data["Site"] = site
+		this.TplNames = "admin/edit_footerAD.tpl" // 页面模板文件
 	}
 }
 

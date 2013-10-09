@@ -37,6 +37,7 @@
                         <li class="nav-header">网站管理</li>
                         <li class="edit-head"><a href="/site/head">首页head</a></li>
                         <li class="edit-body"><a href="/site/body">通用body</a></li>
+						<li class="edit-body"><a href="/site/footerAD">通用footerAD</a></li>
                         <li class="sitemap-list"><a href="/site/sitemap">站点地图</a></li>
                         <li class="nav-header">文章管理</li>
                         <li class="article-list"><a href="/article/list">文章列表</a></li>
@@ -61,7 +62,7 @@
         </div><!-- End .row -->
     </div><!-- End .content -->
     <div class="footer">
-        <p>&copy; 2013 Developed by <a href="http://weibo.com/chinakr" target="_blank">chinakr</a></p>
+        {{template "footer.tpl"}}
     </div><!-- End .footer -->
 </div><!-- End .container -->
 </body>

@@ -41,6 +41,9 @@
                 {{str2html .Sidebar}}
             </div><!-- End .sidebar -->
         </div><!-- End .row -->
+		<div>
+		   {{str2html .FooterAD}}
+		</div>
     </div><!-- End .content -->
     <div class="footer">
         {{template "footer.tpl"}}

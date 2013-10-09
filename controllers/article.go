@@ -15,6 +15,7 @@ func (this *ArticleController) Get() {
 	this.Layout = "layout_article.tpl"
 
 	this.Data["Body"] = GetBody() // 设置通用body，可以是统计代码
+	this.Data["FooterAD"] = GetFooterAD()
 
 	// 设置网站名称
 	this.Data["SiteName"] = SiteName
